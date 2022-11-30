@@ -1,0 +1,53 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="index.css">
+    <title>Document</title>
+    <link rel="stylesheet" href="/path/to/theme.default.css">
+
+    <script type="text/javascript" src="/path/to/jquery-latest.js"></script>
+    <script type="text/javascript" src="/path/to/jquery.tablesorter.js"></script>
+    <script type="text/javascript" src="/path/to/jquery.tablesorter.widgets.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap" rel="stylesheet">
+</head>
+<body>
+    <form method="get" action="resultado" onsubmit="">
+    <label>Link</label>
+    <br>
+    <input type="text" placeholder="Introduzca el link" name="resultado" id="link">
+
+
+    <button type="submit">Buscar</button>
+
+</form>
+    <p>Click the button to sort the table alphabetically, by name:</p>
+    <p><button onclick="sortTotal()">Sort</button></p>
+
+    <table class="tablesorter"  id="myTable" >
+        <thead>
+        <tr>
+            <th>Producto</th>
+            <th>Precio</th>
+            <th>Url</th>
+        </tr>
+        </thead>
+        <tbody id="feed">
+
+        </tbody>
+    </table>
+<script src="./app.js"></script>
+<script>
+    $(function() {
+        $("#myTable").tablesorter();
+    });
+    $(function() {
+        $("#myTable").tablesorter({ sortList: [[0,0], [1,0]] });
+    });
+</script>
+</body>
+</html>

@@ -1,0 +1,19 @@
+
+body{
+    font-family: 'Libre Baskerville', serif;
+    font-style: normal;
+}
+table{
+    background-color: #00c3a2;
+    border: 0px;
+border-spacing: 0px;
+
+
+}
+
+
+tr:hover{
+    background-color: #00e5c2;
+    padding: 10px;
+    margin: 10px;
+}
